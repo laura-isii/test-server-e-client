@@ -74,3 +74,43 @@ Un utile ausilio allo sviluppo di progetti .NET Core è il comando `dotnet watch
     dotnet watch run
     ```
 1. E' ora possibile vedere le modifiche applicate al codice senza riavvare *myapi*.
+
+# Pubblicazione su Github
+
+## Creazione del repository
+
+1. Accedere a [github.com](https://github.com)
+1. Selezionare *Start a project*
+1. Immettere semplicemente un nome, ed opzionalmente una descrizione. Lasciare gli altri campi intatti.
+1. Seguire le istruzioni per *"...add existing repository"*. Eseguire i comandi nel terminale di VS Code, a livello di root. Se necessario, immettere le proprie credenziali per il comando `git push`.
+
+## Aggiunta di collaboratori
+
+1. Dalla pagina del repository appena creato, individuare il tab *Settings*
+1. Selezionare la sotto voce *Collaborators* e invitare gli altri utenti tramite email o nickname. Devono già essere registrati.
+
+## Clonare il repository
+
+Per iniziare a sviluppare, i nuovi utenti devono eseguire il *clone* del repository.
+
+1. Dalla homepage del repository, tab *Code*, individuare e cliccare il pulsante verde *Clone or download*
+1. Cliccare l'icona accanto all'URL (*Copy to clipboard*)
+1. In una cartella adatta, aprire un terminale e quindi:
+    ```cmd
+    git clone <URL COPIATO>
+    ```
+    Questo clonerà il codice nella cartella corrente. In alternativa:
+    ```cmd
+    git clone <URL COPIATO> <cartella soluzione>
+    ```
+    Creerà la cartella indicata e vi copierà i file.
+
+## Pushare le modifiche su Github
+Di base, Git è uno strumento **locale**, che opera quindi sul PC dell'utente. Procedere normalmente con i vari *commit*. Per condividere gli sviluppi fatti, poi, è sufficiente:
+
+1. In VS Code, aprire il tab *Controllo del codice sorgente* (icona simile ad una forbice)
+1. Andare sui "..." e cliccare "Esegui Push".
+
+Per ricevere le modifiche altrui, cliccare invece *Esegui pull*.
+
+**NOTA**: In modo compatto, è presente un'icona "ricircolo" nella status bar di VS Code, a sinistra. Questo comando esegue prima un pull e quindi un push. Di norma, presenta due numeri, i commit in arrivo e quelli in uscita.
